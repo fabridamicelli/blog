@@ -4,4 +4,4 @@ title: links
 permalink: /links/
 ---
 
-**A liste of cool resources out there in the wild – coming soon!**
+**A list of cool resources out there – coming soon!**
