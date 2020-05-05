@@ -1,10 +1,9 @@
 ---
-title: "Bingo Percolation"
-description: "It's not coffee, but still percolates. It's Bingo!"
-toc: false
+toc: true
 layout: post
-author: Fabrizio Damicelli
-categories: [python, probabilities, computational-stats]
+description: A minimal example of using markdown with fastpages.
+categories: [markdown]
+title: An Example Markdown Post
 ---
 
 # Let's play bingo percolation! 
@@ -174,6 +173,7 @@ Individual traces correspond to each run, while the bold lines depict the
 average trace for each case.
 
 ![](https://github.com/fabridamicelli/bingo_percolation/blob/master/images/lines_and_bingos.png)
+![]({{ site.baseurl }}/images/logo.png "fast.ai's logo")
 
 
 In fact, we see a sharp transition both in the proportion of players with at least one line as well as in the proportion of players with bingo.
