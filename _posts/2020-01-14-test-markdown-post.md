@@ -46,7 +46,7 @@ And a numbered list:
 {% include info.html text="You can include info boxes" %}
 
 ## Images
-
+![](https://github.com/fabridamicelli/bingo_percolation/blob/master/images/lines_and_bingos.png)
 ![]({{ site.baseurl }}/images/logo.png "fast.ai's logo")
 
 ## Code
