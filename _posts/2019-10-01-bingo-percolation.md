@@ -180,3 +180,6 @@ In fact, we see a sharp transition both in the proportion of players with at lea
 ### Lo and behold, the curves kind of agree with the initial intuition :)
 
 All the code can be found [here](https://github.com/fabridamicelli/bingo_percolation).
+
+----
+#### Any bugs, questions, comments, suggestions? Ping me on [twitter](https://www.twitter.com/fabridamicelli) or [drop me an e-mail](https://www.uke.de/allgemein/arztprofile-und-wissenschaftlerprofile/wissenschaftlerprofilseite_fabrizio_damicelli.html).
