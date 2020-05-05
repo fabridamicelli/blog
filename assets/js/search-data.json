@@ -27,6 +27,61 @@
   
 
   
+      ,"page1": {
+          "title": "about",
+          "content": "Hi! I’m Fabrizio, a PhD Student at the Institute of Computational Neuroscience in Hamburg (Germany). Check out the research, career to learn a bit more about that. . More details coming soon! .",
+          "url": "https://fabridamicelli.github.io/blog/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "career",
+          "content": "Coming very, very soon! .",
+          "url": "https://fabridamicelli.github.io/blog/career/",
+          "relUrl": "/career/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
+          "title": "code",
+          "content": "More details coming soon. For the time being, you can check out my repo here. .",
+          "url": "https://fabridamicelli.github.io/blog/code/",
+          "relUrl": "/code/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+      ,"page5": {
+          "title": "links",
+          "content": "A liste of cool resources out there in the wild – coming soon! .",
+          "url": "https://fabridamicelli.github.io/blog/links/",
+          "relUrl": "/links/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page6": {
+          "title": "research",
+          "content": "Coming very, very soon! .",
+          "url": "https://fabridamicelli.github.io/blog/research/",
+          "relUrl": "/research/",
+          "date": ""
+      }
+      
+  
 
   
   
@@ -48,7 +103,7 @@
   
 
   
-      ,"page9": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://fabridamicelli.github.io/blog/robots.txt",
