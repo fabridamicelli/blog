@@ -173,7 +173,7 @@ The output figure shows the results of 100 rounds of the game, played by
 Individual traces correspond to each run, while the bold lines depict the 
 average trace for each case.
 
-![]({{ site.baseurl }}/images/lines_and_bingos.png)
+![]({{ site.baseurl }}/images/bingo-percolation/lines_and_bingos.png)
 
 In fact, we see a sharp transition both in the proportion of players with at least one line as well as in the proportion of players with bingo.
 
