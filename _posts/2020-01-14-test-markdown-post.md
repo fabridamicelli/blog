@@ -63,6 +63,14 @@ seventh
 ![](https://github.com/fastai/fastpages/blob/master/images/logo.png)
 eigth
 ![](github.com/fabridamicelli/bingo_percolation/blob/master/images/lines_and_bingos.png)
+nineth
+![](../images/logo.png)
+tenth
+![](./images/logo.png)
+eleventh
+![](/images/logo.png)
+twelveth
+![](images/logo.png)
 
 ## Code
 
