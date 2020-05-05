@@ -52,13 +52,17 @@ first
 second
 ![](https://github.com/fabridamicelli/bingo_percolation/blob/master/images/lines_and_bingos.png)
 third
-![]({{ site.baseurl }}/images/logo.png "fast.ai's logo")
+![]({{ site.baseurl }}/images/logo.png)
 fourth
 ![](github.com/fastai/fastpages/blob/master/images/logo.png)
 fifth
 ![ad](https://github.com/fastai/fastpages/blob/master/images/logo.png)
 sixth
 ![pas](github.com/fabridamicelli/bingo_percolation/blob/master/images/lines_and_bingos.png)
+seventh
+![](https://github.com/fastai/fastpages/blob/master/images/logo.png)
+eigth
+![](github.com/fabridamicelli/bingo_percolation/blob/master/images/lines_and_bingos.png)
 
 ## Code
 
