@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Bingo Percolation | Fabrizio Damicelli</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Bingo Percolation" />
+<meta name="author" content="Fabrizio Damicelli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It’s not coffee, but still percolates. It’s Bingo!" />
+<meta property="og:description" content="It’s not coffee, but still percolates. It’s Bingo!" />
+<link rel="canonical" href="https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html" />
+<meta property="og:url" content="https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html" />
+<meta property="og:site_name" content="Fabrizio Damicelli" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"It’s not coffee, but still percolates. It’s Bingo!","headline":"Bingo Percolation","dateModified":"2019-10-01T00:00:00-05:00","datePublished":"2019-10-01T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://fabridamicelli.github.io/blog/feed.xml" title="Fabrizio Damicelli" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Bingo Percolation | Fabrizio Damicelli</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Bingo Percolation" />
+<meta name="author" content="Fabrizio Damicelli" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It’s not coffee, but still percolates. It’s Bingo!" />
+<meta property="og:description" content="It’s not coffee, but still percolates. It’s Bingo!" />
+<link rel="canonical" href="https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html" />
+<meta property="og:url" content="https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html" />
+<meta property="og:site_name" content="Fabrizio Damicelli" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"It’s not coffee, but still percolates. It’s Bingo!","headline":"Bingo Percolation","dateModified":"2019-10-01T00:00:00-05:00","datePublished":"2019-10-01T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://fabridamicelli.github.io/blog/feed.xml" title="Fabrizio Damicelli" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script type="text/javascript">
+require.config({
+  paths: {
+    jquery: 'https://code.jquery.com/jquery-3.5.0.min',
+    plotly: 'https://cdn.plot.ly/plotly-latest.min'
+  },
+
+  shim: {
+    plotly: {
+      deps: ['jquery'],
+      exports: 'plotly'
+    }
+  }
+});
+</script>
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Fabrizio Damicelli</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Bingo Percolation</h1><p class="page-description">It's not coffee, but still percolates. It's Bingo!</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2019-10-01T00:00:00-05:00" itemprop="datePublished">
+        Oct 1, 2019
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Fabrizio Damicelli</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#python">python</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#probabilities">probabilities</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#computational-stats">computational-stats</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="lets-play-bingo-percolation">Let’s play bingo percolation!</h1>
+
+<p><em>Disclaimer:</em> what you’re about to read might be somehow trivial and analytically
+solvable after a bit of combinatorics-probabilities gymnastics. 
+If that already sounds boring, imagine actually going through it with pen and 
+paper. Let’s see what Python can do for us.</p>
+
+<p><em>edit:</em> I just learned about <a href="https://koaning.io/posts/bingo-ball-pit/">this post</a>. 
+Vincent approaches it from a complementary, analytical perspective, so check it out.</p>
+
+<p><em>Disclaimer 2:</em> this is not about coffee. I’m sorry too.</p>
+
+<h2 id="the-story">The story</h2>
+<p>So one day we where playing champagne-bingo because.. why not?
+It’s a pretty straight forward game. 
+If you know <a href="https://en.wikipedia.org/wiki/Bingo_(U.S.)">bingo</a>, it’s the same,
+ but! everyone has a glass of champagne and is supposed to take a sip if the 
+ drawn number is not on his/her ticket. Easy.
+You can do the math for yourself about the number of times you end up having
+to drink..but that’s not the point here.</p>
+
+<h3 id="percolation">Percolation</h3>
+<p><a href="https://en.wikipedia.org/wiki/Percolation_theory">Percolation</a> refers to
+ a whole world of interesting stuff, ranging from coffee brewing to epidemics 
+ spreading and everything in between. 
+But it suffices here to know that the deal is about trying to understand 
+<em>phase transitions</em> in a particular system.
+That means, characterizing and being able to predict a qualitative change in 
+the behaviour of some macroscopic property of the system. 
+For example, let’s say we have a bunch of isolated new users of a new social 
+network.
+Now we start connecting them <em>randomly</em>, like getting them to be friends but 
+without any criterion rather than a certain fixed probability of getting connected.
+Percolation theory helps us predicting what is the minimum amount of friends per
+ person that we need (on average) in order to have a social network that is 
+ connected, i.e., in which everybody is reachable by taking a finite number of
+ hops in the network.
+Pretty useful, right?</p>
+
+<h3 id="back-to-the-game">Back to the game</h3>
+<p>It turns out we <em>did not stop playing</em> when we where
+supposed to, i.e., whenever someone won (got bingo) just for the sake of.. 
+you know.. just having fun a bit longer.</p>
+
+<p>And my observation was that, after a long period of people doing little more 
+than drinking number after number (pretty hard life), a rather abrupt transition 
+seemed to occur and folks were getting (first) lines (and then) bingo more and 
+more often.
+In other words, as time passed (numbers got drawn), the probability that someone would 
+jump up, scream out loud “line” or “bingo” while performing a 
+nice <a href="https://www.youtube.com/watch?v=r3JAM1nuNAk">hula dance</a> seemed to be higher and
+higher.
+Yes, you got it, a non-linear transition. 
+Yes, like a percolation. To be more precise, a bingo-percolation!</p>
+
+<p>So let’s see if that is actually the case.</p>
+
+<h2 id="bingo">Bingo</h2>
+<p>There are a couple of variations to it, but the one we played looked like this:</p>
+<ul>
+  <li>75 balls numbered 1 to 75</li>
+  <li>each ticket has 25 numbers (5x5 grid), each column having the numbers:
+    <ul>
+      <li>(B) first:  1-15</li>
+      <li>(I) second: 16-30</li>
+      <li>(N) third:  31-45</li>
+      <li>(G) fourth: 46-60</li>
+      <li>(O) fifth:  61-75</li>
+    </ul>
+  </li>
+  <li>“line”: full horizontal/vertical/diagonal line marked *</li>
+  <li>“bingo”: full ticket marked</li>
+</ul>
+
+<p>(<em>Minutia:</em> For the “lines” we only track the occurrence of <em>at least</em> one line per ticket,
+since there was a price for only the first one getting it.
+So after a player gets a line, she will afterwards always count as simply having
+at least one line, independently from the fact that she can get a different line 
+in the future.)</p>
+
+<h3 id="on-to-the-code">On to the code!</h3>
+<h4 id="requirements">Requirements</h4>
+<ul>
+  <li><code class="highlighter-rouge">numpy</code></li>
+  <li><code class="highlighter-rouge">matplotlib</code></li>
+  <li><code class="highlighter-rouge">seaborn</code></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># We need
+# - tickets
+# - number drawer
+# - ticket marker
+# - ticket checker 
+# - game runner
+</span>
+
+<span class="k">def</span> <span class="nf">make_tickets</span><span class="p">(</span><span class="n">n_tickets</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="s">'''
+    Return 3D array - stack of n_tickets.
+    '''</span> 
+    <span class="n">tickets</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">([</span>
+            <span class="nb">sorted</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">76</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">)])</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_tickets</span><span class="p">)</span>
+        <span class="p">]</span>
+    <span class="k">if</span> <span class="n">n_tickets</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tickets</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tickets</span><span class="p">)</span> 
+
+<span class="k">def</span> <span class="nf">draw_allnumbers</span><span class="p">():</span>
+    <span class="s">'''Draw the numbers for the whole game at once'''</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">76</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">mark_ticket</span><span class="p">(</span><span class="n">ticket</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+    <span class="s">'''
+    Modify ticket putting a mark (0) if number is on it.
+    '''</span>
+    <span class="n">ticket</span><span class="p">[</span><span class="n">ticket</span> <span class="o">==</span> <span class="n">number</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">ticket</span>
+
+<span class="k">def</span> <span class="nf">check_line</span><span class="p">(</span><span class="n">ticket</span><span class="p">):</span>
+    <span class="s">'''
+    Return: (bool) ticket has at least one of the valid lines marked.
+    '''</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="nb">any</span><span class="p">([</span>
+        <span class="nb">sum</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">row</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">ticket</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1"># horizontal
+</span>        <span class="nb">sum</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">row</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">ticket</span><span class="o">.</span><span class="n">T</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span>  <span class="c1"># vertical
+</span>        <span class="n">np</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">ticket</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span>  <span class="c1"># diagonals
+</span>        <span class="n">np</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">ticket</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">])</span>
+    <span class="k">return</span> <span class="n">line</span>
+
+<span class="k">def</span> <span class="nf">check_bingo</span><span class="p">(</span><span class="n">ticket</span><span class="p">):</span>
+    <span class="s">'''Return True if ticket has bingo (all numbers are marked)'''</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">ticket</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> 
+    
+<span class="k">def</span> <span class="nf">play_game</span><span class="p">(</span><span class="n">n_players</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="c1"># Initialize game
+</span>    <span class="n">tickets</span> <span class="o">=</span> <span class="n">make_tickets</span><span class="p">(</span><span class="n">n_players</span><span class="p">)</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="n">draw_allnumbers</span><span class="p">()</span>
+
+    <span class="c1"># Track number of lines/bingos after each number drawn
+</span>    <span class="n">lines</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="n">bingos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+    <span class="c1"># Play rounds, number by number
+</span>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">ticket</span> <span class="ow">in</span> <span class="n">tickets</span><span class="p">:</span>
+            <span class="n">mark_ticket</span><span class="p">(</span><span class="n">ticket</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+            <span class="c1"># Check how many players got have at least one line or bingo
+</span>            <span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">check_line</span><span class="p">(</span><span class="n">ticket</span><span class="p">)</span>
+            <span class="n">bingos</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">check_bingo</span><span class="p">(</span><span class="n">ticket</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">lines</span><span class="p">,</span> <span class="n">bingos</span>
+</code></pre></div></div>
+
+<h3 id="thats-it">That’s it!</h3>
+<p>So we can run the script <a href="https://github.com/fabridamicelli/bingo_percolation/blob/master/bingo.py">bingo.py</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python bingo.py
+</code></pre></div></div>
+
+<p>The output figure shows the results of 100 rounds of the game, played by
+100 players.
+Individual traces correspond to each run, while the bold lines depict the 
+average trace for each case.</p>
+
+<p><img src="https://github.com/fabridamicelli/bingo_percolation/blob/master/images/lines_and_bingos.png" alt="" /></p>
+
+<p>In fact, we see a sharp transition both in the proportion of players with at least one line as well as in the proportion of players with bingo.</p>
+
+<h3 id="lo-and-behold-the-curves-kind-of-agree-with-the-initial-intuition-">Lo and behold, the curves kind of agree with the initial intuition :)</h3>
+
+<p>All the code can be found <a href="https://github.com/fabridamicelli/bingo_percolation">here</a>.</p>
+
+  </div><a class="u-url" href="/blog/python/probabilities/computational-stats/2019/10/01/bingo-percolation.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fabridamicelli" title="fabridamicelli"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/fabridamicelli" title="fabridamicelli"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fabridamicelli" title="fabridamicelli"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
