@@ -139,11 +139,12 @@ window.onload = wrap_img;
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Numpy">Numpy </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Doing-array-*=-something-is-very-different-from-array-=-array-*-something">Doing array *= something is very different from array = array * something </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#Any-bugs,-questions,-comments,-suggestions?-Ping-me-on-twitter-or-drop-me-an-e-mail.">Any bugs, questions, comments, suggestions? Ping me on twitter or drop me an e-mail. </a></li>
+<li class="toc-entry toc-h3"><a href="#Doing-array-*=-something-is-very-different-from-array-=-array-*-something">Doing array *= something is very different from array = array * something </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#References">References </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Any-bugs,-questions,-comments,-suggestions?-Ping-me-on-twitter-or-drop-me-an-e-mail.">Any bugs, questions, comments, suggestions? Ping me on twitter or drop me an e-mail. </a></li>
 </ul>
 </li>
 </ul><!--
@@ -195,7 +196,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We define two functions that to the eyes of many (including past me) do just the same.</p>
+<p>Let's see why. <br>
+We define two functions that to the eyes of many (including past me) do just the same.</p>
 
 </div>
 </div>
@@ -210,7 +212,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">scalar</span><span class="p">):</span>
-    <span class="n">array</span> <span class="o">*=</span> <span class="n">scalar</span>  <span class="c1"># &lt;-- handy short hand, right? ;)</span>
+    <span class="n">array</span> <span class="o">*=</span> <span class="n">scalar</span>  <span class="c1"># &lt;-- handy short hand, right?  ;)</span>
     <span class="k">return</span> <span class="n">array</span>
 
 <span class="k">def</span> <span class="nf">multiply2</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">scalar</span><span class="p">):</span>
@@ -521,11 +523,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Despite it being very basic, it is actually more difficult to debug than for the toy example in real life cases.\
-For instance, in the middle of a long data preprocessing pipeline.
-If you load your data <em>once</em> and run the preprocessing pipeline <em>once</em>, you will probably not notice the bug (that's the tricky thing!).\
-But if the loaded data are passed more than once to the pipeline (without reloading the whole data), each pass will be actually feeding <em>different input</em>.\
-For instance, if you run K-Fold cross-validation, most likely it won't crash or anything, but you will be passing K different datasets to your model and your validation will be just rubbish!</p>
+<p>Despite it being very basic, it is actually more difficult to debug than for the toy example in real life cases. For instance, in the middle of a long data preprocessing pipeline. If you load your data <em>once</em> and run the preprocessing pipeline <em>once</em>, you will probably not notice the bug (that's the tricky thing!).<br>
+But if the loaded data are passed more than once through the pipeline (without reloading the whole data), each pass will be actually feeding <em>different input</em>.<br>
+For example, if you run K-Fold cross-validation, most likely it won't crash or anything, but you will be passing K different datasets to your model and your validation will be just rubbish!</p>
 
 </div>
 </div>
@@ -534,6 +534,19 @@ For instance, if you run K-Fold cross-validation, most likely it won't crash or 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Conclusion:</strong> you'd better be <em>really</em> sure of what you're doing with <code>array = array * something</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="References">
+<a class="anchor" href="#References" aria-hidden="true"><span class="octicon octicon-link"></span></a>References<a class="anchor-link" href="#References"> </a>
+</h2>
+<ul>
+<li><a href="https://imgs.xkcd.com/comics/python.png">xkcd comics</a></li>
+</ul>
 
 </div>
 </div>
