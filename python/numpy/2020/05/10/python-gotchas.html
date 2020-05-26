@@ -8,15 +8,15 @@
 <meta property="og:title" content="Python Gotchas" />
 <meta name="author" content="Fabrizio Damicelli" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="We love Python and its third party libraries. But some features will once in a while cost us a couple of hours chasing a silly bug. Ad eternum growing list with some of the ones that gave me a headache." />
-<meta property="og:description" content="We love Python and its third party libraries. But some features will once in a while cost us a couple of hours chasing a silly bug. Ad eternum growing list with some of the ones that gave me a headache." />
+<meta name="description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
+<meta property="og:description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
 <link rel="canonical" href="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
 <meta property="og:url" content="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
 <meta property="og:site_name" content="Fabrizio Damicelli" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-10T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"We love Python and its third party libraries. But some features will once in a while cost us a couple of hours chasing a silly bug. Ad eternum growing list with some of the ones that gave me a headache.","headline":"Python Gotchas","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches.","headline":"Python Gotchas","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://fabridamicelli.github.io/blog/feed.xml" title="Fabrizio Damicelli" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Python Gotchas | Fabrizio Damicelli</title>
@@ -24,15 +24,15 @@
 <meta property="og:title" content="Python Gotchas" />
 <meta name="author" content="Fabrizio Damicelli" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="We love Python and its third party libraries. But some features will once in a while cost us a couple of hours chasing a silly bug. Ad eternum growing list with some of the ones that gave me a headache." />
-<meta property="og:description" content="We love Python and its third party libraries. But some features will once in a while cost us a couple of hours chasing a silly bug. Ad eternum growing list with some of the ones that gave me a headache." />
+<meta name="description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
+<meta property="og:description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
 <link rel="canonical" href="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
 <meta property="og:url" content="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
 <meta property="og:site_name" content="Fabrizio Damicelli" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-10T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"We love Python and its third party libraries. But some features will once in a while cost us a couple of hours chasing a silly bug. Ad eternum growing list with some of the ones that gave me a headache.","headline":"Python Gotchas","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches.","headline":"Python Gotchas","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -87,7 +87,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Python Gotchas</h1><p class="page-description">We love Python and its third party libraries. But some features will once in a while cost us a couple of hours chasing a silly bug. Ad eternum growing list with some of the ones that gave me a headache.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-10T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Python Gotchas</h1><p class="page-description">The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-10T00:00:00-05:00" itemprop="datePublished">
         May 10, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
