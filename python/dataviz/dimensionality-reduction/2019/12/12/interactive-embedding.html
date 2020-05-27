@@ -174,14 +174,14 @@ Hopefully, those number actually mean something (whatever we understand by "mean
 Hopefully.
 Things start to get trickier.
 A beautiful example of that are <a href="https://en.wikipedia.org/wiki/Word_embedding">word-embeddings</a>, which is the thing I was originally playing with when I needed the visualization that I will show you.
-These embeddings represent each word with a vector, typically of length between 300 and 1000.
-That's what I mean high-dimensional.
-What the coordinates actually mean in that case is highly non-trivial and you can find out about it in the article linked above.
+These embeddings represent each word with a vector, typically having between 300 and 1000 dimensions.
+That's what I mean by high-dimensional.
+What the coordinates actually mean in that case is highly non-trivial and you can find out about it in the above-mentioned article.
 Other datasets are even more massive in terms of the number of features though, e.g., <a href="https://en.wikipedia.org/wiki/DNA_microarray">gene expression data</a> are usually orders of magnitude larger.</p>
 <p>I'd be saying nothing new if I pointed out that humans (we typically don't talk about that with other animals) have a hard time visualizing space with more than three dimensions. 
 Even with <a href="https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons">86 billion of neurons</a> between their ears.
 At this point, several of you will be saying: "but! Carl Sagan... bla, bla"..
-In case you're too young, too old or simple had something else better to do and didn't watch that episode, just this short video and then get back – you won't regreat:</p>
+In case you're too young, too old or simple had something else better to do and didn't watch that episode, just watch this short video and then get back – you won't regreat:</p>
 
 </div>
 </div>
@@ -199,12 +199,12 @@ In case you're too young, too old or simple had something else better to do and 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Back to your data.
-People do all sorts of tricks to wrap their mind around those wild, high-dimensional data, living in spaces with really funky shapes and fundamentally counterintuitive to our daily spatial perception of the world.
+<p>Back to the data.
+People do all sorts of tricks to wrap their mind around those wild, high-dimensional data in spaces with really funky shapes and fundamentally counterintuitive to our daily spatial perception of the world.
 Here comes a whole zoo of <a href="https://en.wikipedia.org/wiki/Dimensionality_reduction">dimensionality reduction methods</a> (e.g., PCA, tSNE) that project your data down to something your visual system can deal with. 
 Of course, visualization is just one use case, but you may also want to store your data more efficiently or find outliers, or simply make life easier to your machine learning algorithm.
 We won't talk about those here.</p>
-<h4 id="Why-bother?-The-good,-the-bad-and-the-ugly-metric.">Why bother? <em>The good, the bad and the ugly</em> metric.<a class="anchor-link" href="#Why-bother?-The-good,-the-bad-and-the-ugly-metric."> </a></h4><p>Let's say you have your projected data in 2D, for example, after PCA.
+<h4 id="Why-bother?-The-good,-the-bad-and-the-ugly-metric.">Why bother? <em>The good, the bad and the ugly</em> metric.<a class="anchor-link" href="#Why-bother?-The-good,-the-bad-and-the-ugly-metric."> </a></h4><p>Let's say you have your projected data in 2D, for example, after tSNE.
 First things first: you might want to check if the projection that your method just spit out makes any sense at all.
 But, why, what can go wrong?
 Well, a lot.
@@ -222,7 +222,7 @@ To keep it concrete, just take a look at these nice examples from the <a href="h
 <p>Some libraries, like UMAP, also allow you to <a href="https://umap-learn.readthedocs.io/en/latest/document_embedding.html">document your embedding</a> or <a href="https://umap-learn.readthedocs.io/en/latest/plotting.html">plot interactive figures</a>.
 But you might have a tougher luck this time around and just get a cloud of unintelligible points scattered when you plot the 2D-projected data.
 In that case, you might find it useful to interact with it by looking at the labels of your data.
-The labels can be anything, like known categories of your data or the result of your favourite clustering method.</p>
+The labels can be anything, like <em>a priori</em> known categories the result of your favourite clustering method.</p>
 <p>That's what you came for :)
 So without further ado, on to the code.</p>
 
@@ -443,6 +443,18 @@ That will generate an interactive file like <a href="https://nbviewer.jupyter.or
 <li><a href="https://grantcuster.github.io/umap-explorer/">This</a> and <a href="http://doc.gold.ac.uk/~lfedd001/three/demo.html">this</a> for cool visualizations of UMAP projections.</li>
 <li><a href="https://rasahq.github.io/whatlies/">whatlies</a>: "A library that tries help you to understand. What lies in word embeddings?". This didn't exist when I wrote this function – would be my first choice now. It goes way beyond of what I showed and has integration with other NLP tools as well.</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bonus: Funny games in high dimensions!
+
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6_yU9eJ0NxA" frameborder="0" allowfullscreen=""></iframe>
+</center>
+</p>
 
 </div>
 </div>
