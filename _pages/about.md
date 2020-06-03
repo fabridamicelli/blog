@@ -4,7 +4,7 @@ title: about
 permalink: /about/
 ---
 
-<img align="right" src="{{site.baseurl}}/images/profile-pixels.png" width="155" height="184">
+<img align="right" src="{{site.baseurl}}/images/profile-pixels.png" width="175" height="190">
 
 Hi, I'm Fabrizio. Thanks for your visit!
 
