@@ -11,7 +11,7 @@ Self-taugh coder, strong open-source and team-work and advocate.
 I like music a lot, Python, berries and simple ideas behind complex phenomena.
 I prefer strong intuitions and simple words to unnecessary sophistication and difficult jargon.
 
-Feel free to get in touch on twitter [@fabridamicelli](www.twitter.com/fabridamicelli) or drop me an e-mail f.{mylastname}@uke.de.
+Feel free to get in touch on [twitter](www.twitter.com/fabridamicelli) or drop me an e-mail f.{mylastname}@uke.de.
 
 ## Research
 ### Short
