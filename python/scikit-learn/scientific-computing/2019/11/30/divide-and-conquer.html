@@ -1298,12 +1298,12 @@ If your matrix distance is too big such that cannot be concatenated into one arr
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_vectors</span> <span class="o">=</span> <span class="mi">30_000</span>
 <span class="n">n_dimensions</span> <span class="o">=</span> <span class="mi">300</span> 
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_vectors</span><span class="p">,</span> <span class="n">n_dimensions</span><span class="p">))</span>
+<span class="n">all_vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_vectors</span><span class="p">,</span> <span class="n">n_dimensions</span><span class="p">))</span>
 
-<span class="n">D_skl</span> <span class="o">=</span> <span class="n">cosine_distances</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="n">D_chunk</span> <span class="o">=</span> <span class="n">cosine_distance_chunks</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">distances_skl</span> <span class="o">=</span> <span class="n">cosine_distances</span><span class="p">(</span><span class="n">all_vectors</span><span class="p">)</span>
+<span class="n">distances_chunk</span> <span class="o">=</span> <span class="n">cosine_distance_chunks</span><span class="p">(</span><span class="n">all_vectors</span><span class="p">)</span>
 
-<span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">D_skl</span><span class="p">,</span> <span class="n">D_chunk</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">distances_skl</span><span class="p">,</span> <span class="n">distances_chunk</span><span class="p">)</span>
 </pre></div>
 
     </div>
