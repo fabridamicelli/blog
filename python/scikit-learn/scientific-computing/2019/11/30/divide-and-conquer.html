@@ -1317,12 +1317,12 @@ If your matrix distance is too big such that cannot be concatenated into one arr
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><div class="flash flash-success">
     <svg class="octicon octicon-checklist" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 8.5l-6 6-3-3L8.5 10l1.5 1.5L14.5 7 16 8.5zM5.7 12.2l.8.8H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h7c.55 0 1 .45 1 1v6.5l-.8-.8c-.39-.39-1.03-.39-1.42 0L5.7 10.8a.996.996 0 000 1.41v-.01zM4 4h5V3H4v1zm0 2h5V5H4v1zm0 2h3V7H4v1zM3 9H2v1h1V9zm0-2H2v1h1V7zm0-2H2v1h1V5zm0-2H2v1h1V3z"></path></svg>
-    <strong>Tip: </strong><code>pairwise_distances_chunked</code> has some parameters that can be pretty useful: <br /> - n_jobs: distribute the computation across cores (though you might want to experiment a bit since overhead might make it actually worse). <br /> - metric: compute other metric [^1] than cosine distance, such as euclidean distance or even your own defined function. <br /> You can check the rest of them in the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances_chunked.html">documentation</a>. <br />
-</div>[^1]: The sharp eye might have noticed that the term "metric" is not quite correct. Strictly speaking cosine distance is not a metric (the reason for that can be found <a href="https://en.wikipedia.org/wiki/Cosine_similarity">here</a>.</p>
+    <strong>Tip: </strong><code>pairwise_distances_chunked</code> has some parameters that can be pretty useful: <br /> - n_jobs: distribute the computation across cores (though you might want to experiment a bit since overhead might make it actually worse). <br /> - metric: compute other metric<em> than cosine distance, such as euclidean distance or even your own defined function. <br /> You can check the rest of them in the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances_chunked.html">documentation</a>. <br />
+&lt;/div&gt;</em>: The sharp eye might have noticed that the term "metric" is not quite correct here. Strictly speaking cosine distance is not a metric (the reason for that can be found <a href="https://en.wikipedia.org/wiki/Cosine_similarity">here</a>).&lt;/p&gt;
 
 </div>
-</div>
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Take home message:
@@ -1357,8 +1357,10 @@ The odds that you'll find something useful are really on your side.</p>
 </div>
 </div>
 </div>
-</div>
+&lt;/div&gt;
+ 
 
+</p></div></div></div></div>
 
 
   </div><a class="u-url" href="/blog/python/scikit-learn/scientific-computing/2019/11/30/divide-and-conquer.html" hidden></a>
