@@ -3,6 +3,7 @@ title: "Bingo Percolation"
 description: "It's not coffee, but still percolates. It's Bingo!"
 toc: false
 layout: post
+sticky_rank: 3
 author: Fabrizio Damicelli
 categories: [python, probabilities, computational-stats]
 ---
