@@ -3,39 +3,39 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Python Gotchas | Fabrizio Damicelli</title>
+<title>Explicit is better than implicit | Fabrizio Damicelli</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Python Gotchas" />
+<meta property="og:title" content="Explicit is better than implicit" />
 <meta name="author" content="Fabrizio Damicelli" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
-<meta property="og:description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
-<link rel="canonical" href="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
-<meta property="og:url" content="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
+<meta name="description" content="A basic but not so obvious numpy example" />
+<meta property="og:description" content="A basic but not so obvious numpy example" />
+<link rel="canonical" href="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html" />
+<meta property="og:url" content="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html" />
 <meta property="og:site_name" content="Fabrizio Damicelli" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-10T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches.","headline":"Python Gotchas","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"A basic but not so obvious numpy example","headline":"Explicit is better than implicit","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://fabridamicelli.github.io/blog/feed.xml" title="Fabrizio Damicelli" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16.png">
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Python Gotchas | Fabrizio Damicelli</title>
+<title>Explicit is better than implicit | Fabrizio Damicelli</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Python Gotchas" />
+<meta property="og:title" content="Explicit is better than implicit" />
 <meta name="author" content="Fabrizio Damicelli" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
-<meta property="og:description" content="The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches." />
-<link rel="canonical" href="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
-<meta property="og:url" content="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html" />
+<meta name="description" content="A basic but not so obvious numpy example" />
+<meta property="og:description" content="A basic but not so obvious numpy example" />
+<link rel="canonical" href="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html" />
+<meta property="og:url" content="https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html" />
 <meta property="og:site_name" content="Fabrizio Damicelli" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-10T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches.","headline":"Python Gotchas","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/python-gotchas.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Fabrizio Damicelli"},"description":"A basic but not so obvious numpy example","headline":"Explicit is better than implicit","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","@type":"BlogPosting","url":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://fabridamicelli.github.io/blog/python/numpy/2020/05/10/numpy-array-in-place.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -106,7 +106,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Python Gotchas</h1><p class="page-description">The awesomeness of Python and its third party libraries comes with behaviours that sometimes make us chase silly bugs for hours. This is an ad eternum growing collection of those headaches.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-10T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Explicit is better than implicit</h1><p class="page-description">A basic but not so obvious numpy example</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-10T00:00:00-05:00" itemprop="datePublished">
         May 10, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -135,19 +135,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/fabridamicelli/blog/tree/master/_notebooks/2020-05-10-python-gotchas.ipynb" role="button" target="_blank">
+    <a href="https://github.com/fabridamicelli/blog/tree/master/_notebooks/2020-05-10-numpy-array-in-place.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/fabridamicelli/blog/master?filepath=_notebooks%2F2020-05-10-python-gotchas.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/fabridamicelli/blog/master?filepath=_notebooks%2F2020-05-10-numpy-array-in-place.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/fabridamicelli/blog/blob/master/_notebooks/2020-05-10-python-gotchas.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/fabridamicelli/blog/blob/master/_notebooks/2020-05-10-numpy-array-in-place.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -156,17 +156,11 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Numpy">Numpy </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Doing-array-*=-something-is-very-different-from-array-=-array-*-something">Doing array *= something is very different from array = array * something </a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#References">References </a></li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2020-05-10-python-gotchas.ipynb
+# file to edit: _notebooks/2020-05-10-numpy-array-in-place.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -181,28 +175,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://imgs.xkcd.com/comics/python.png" alt=""></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Numpy">
-<a class="anchor" href="#Numpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Numpy<a class="anchor-link" href="#Numpy"> </a>
-</h2>
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Doing-array-*=-something-is-very-different-from-array-=-array-*-something">
-<a class="anchor" href="#Doing-array-*=-something-is-very-different-from-array-=-array-*-something" aria-hidden="true"><span class="octicon octicon-link"></span></a>Doing <code>array *= something</code> is very different from <code>array = array * something</code><a class="anchor-link" href="#Doing-array-*=-something-is-very-different-from-array-=-array-*-something"> </a>
-</h3>
 <p>TL; DR: Only use the form <code>array *= something</code> if you're 100% sure you are doing the right thing, otherwise, just go for <code>array = array * something</code>.</p>
 
 </div>
@@ -446,7 +418,7 @@ We define two functions that to the eyes of many (including past me) do just the
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="flash flash-error">
-    <svg class="octicon octicon-alert octicon octicon-alert" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
+    <svg class="octicon octicon-alert" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 000 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 00.01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
     <strong>Warning: </strong>The operation modifies the array <strong>in place</strong>.
 </div>
 
@@ -538,7 +510,8 @@ We define two functions that to the eyes of many (including past me) do just the
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Despite it being very basic, it is actually more difficult to debug than for the toy example in real life cases. For instance, in the middle of a long data preprocessing pipeline. If you load your data <em>once</em> and run the preprocessing pipeline <em>once</em>, you will probably not notice the bug (that's the tricky thing!).<br>
+<p>Despite it being very basic, it is actually more difficult to debug than for the toy example in real life cases. <br>
+For instance, in the middle of a long data preprocessing pipeline. If you load your data <em>once</em> and run the preprocessing pipeline <em>once</em>, you will probably not notice the bug (that's the tricky thing!).<br>
 But if the loaded data are passed more than once through the pipeline (without reloading the whole data), each pass will be actually feeding <em>different input</em>.<br>
 For example, if you run K-Fold cross-validation, most likely it won't crash or anything, but you will be passing K different datasets to your model and your validation will be just rubbish!</p>
 
@@ -548,19 +521,12 @@ For example, if you run K-Fold cross-validation, most likely it won't crash or a
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Conclusion:</strong> you'd better be <em>really</em> sure of what you're doing with <code>array = array * something</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="References">
-<a class="anchor" href="#References" aria-hidden="true"><span class="octicon octicon-link"></span></a>References<a class="anchor-link" href="#References"> </a>
-</h2>
+<p><strong>Conclusions:</strong> <br></p>
 <ul>
-<li><a href="https://imgs.xkcd.com/comics/python.png">xkcd comics</a></li>
+<li>
+<code>array *= something</code> is very different from <code>array = array * something</code> <br>
+</li>
+<li>You'd better be <em>really</em> sure of what you're doing with <code>array = array * something</code>.</li>
 </ul>
 
 </div>
@@ -570,7 +536,7 @@ For example, if you run K-Fold cross-validation, most likely it won't crash or a
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>Any bugs, questions, comments, suggestions? Ping me on <a href="https://www.twitter.com/fabridamicelli">twitter</a> or <a href="https://www.uke.de/allgemein/arztprofile-und-wissenschaftlerprofile/wissenschaftlerprofilseite_fabrizio_damicelli.html">drop me an e-mail</a>.</p>
+<p>Any bugs, questions, comments, suggestions? Ping me on <a href="https://www.twitter.com/fabridamicelli">twitter</a> or drop me an e-mail (fabridamicelli at gmail).</p>
 
 </div>
 </div>
@@ -579,7 +545,7 @@ For example, if you run K-Fold cross-validation, most likely it won't crash or a
 
 
 
-  </div><a class="u-url" href="/blog/python/numpy/2020/05/10/python-gotchas.html" hidden></a>
+  </div><a class="u-url" href="/blog/python/numpy/2020/05/10/numpy-array-in-place.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
