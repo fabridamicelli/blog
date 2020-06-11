@@ -15,3 +15,10 @@ I like music a lot, Python, berries, reading, simple ideas behind complex phenom
 I prefer strong intuitions and simple words to unnecessary sophistication and difficult jargon.
 
 Feel free to get in touch on [twitter](https://twitter.com/fabridamicelli), [LinkedIn](https://www.linkedin.com/in/fabridamicelli) or just drop me an [e-mail](mailto:f.damicelli@uke.de).
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+[^1]: This blog is powered by [fastpages](https://github.com/fastai/fastpages).
