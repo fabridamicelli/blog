@@ -4,7 +4,7 @@ title: links
 permalink: /links/
 ---
 
-Definitely incomplete, always growing list of cool, free learning resources.
+Definitely incomplete, always growing list of cool, free learning/fun resources out there.
 
 ## Blogs
   - [Vincent Warmerdam](https://koaning.io): data, machine learning, algorithms – and nice drawings.
@@ -42,6 +42,7 @@ Definitely incomplete, always growing list of cool, free learning resources.
   - [Python Bytes](https://pythonbytes.fm/episodes/all)
   - [dats'n'stats](http://www.pydata-podcast.com/)
   - [The Real Python](https://realpython.com/podcasts/rpp/)
+  
 ### Data, ML, Maths, etc.
   - [Practical AI](https://open.spotify.com/episode/0dXmvOSo6bvcVRjUY6qWI8?si=r1EyetnTSaWnU8KjRf6Drg)
   - [AI in action](https://open.spotify.com/show/6z0wTS6N8Lwj8zuZHeFKLx)
@@ -55,6 +56,7 @@ Definitely incomplete, always growing list of cool, free learning resources.
   - [Gradient dissent: Weights and biases](https://open.spotify.com/show/7o9r3fFig3MhTJwehXDbXm?si=d7Ncp7nXQ7C1O7wu0Oxvqg)
   - [Dataframed](https://www.datacamp.com/community/podcast)
   - [Partially derivative](http://partiallyderivative.com/)
+  
 ### Discussion, interviews, philosophy
   - [Sean Carrol's Mindscape](https://www.preposterousuniverse.com/podcast/)
   - [The knowledge project](https://fs.blog/knowledge-project/)
