@@ -34,3 +34,38 @@ Definitely incomplete, always growing list of cool, free learning resources.
   - [Ben Lambert – Stats, ML, Bayesian stuff](https://www.youtube.com/user/SpartacanUsuals)
   - [Statsquest – Josh Starmer](https://www.youtube.com/user/joshstarmer): stats, machine learning, algorithms, bam!
   - [Arxiv Insights](https://www.youtube.com/channel/UCNIkB2IeJ-6AmZv7bQ1oBYg): machine learning papers explained and discussed.
+  
+## Podcasts
+### Python & co.
+  - [Podcast.__init__](https://www.pythonpodcast.com/episodes/)
+  - [Talk python to me](https://talkpython.fm/)
+  - [Python Bytes](https://pythonbytes.fm/episodes/all)
+  - [dats'n'stats](http://www.pydata-podcast.com/)
+  - [The Real Python](https://realpython.com/podcasts/rpp/)
+### Data, ML, Maths, etc.
+  - [Practical AI](https://open.spotify.com/episode/0dXmvOSo6bvcVRjUY6qWI8?si=r1EyetnTSaWnU8KjRf6Drg)
+  - [AI in action](https://open.spotify.com/show/6z0wTS6N8Lwj8zuZHeFKLx)
+  - [Complexity - Sta. Fe Institute](https://www.santafe.edu/culture/podcast)
+  - [This week in machine learning](https://twimlai.com/)
+  - [Underrated ML](https://www.underratedml.com/)
+  - [Talking Machines](https://www.thetalkingmachines.com/)
+  - [Numberphile](https://www.numberphile.com/podcast)
+  - [Data skeptic](https://dataskeptic.com/)
+  - [Linear Digressions](http://lineardigressions.com/)
+  - [Gradient dissent: Weights and biases](https://open.spotify.com/show/7o9r3fFig3MhTJwehXDbXm?si=d7Ncp7nXQ7C1O7wu0Oxvqg)
+  - [Dataframed](https://www.datacamp.com/community/podcast)
+  - [Partially derivative](http://partiallyderivative.com/)
+### Discussion, interviews, philosophy
+  - [Sean Carrol's Mindscape](https://www.preposterousuniverse.com/podcast/)
+  - [The knowledge project](https://fs.blog/knowledge-project/)
+  - [Not so standard deviations](http://nssdeviations.com/)
+  - [Artificial Intelligence - Lex Fridman](https://lexfridman.com/ai/)
+  - [Adversarial learning](https://adversariallearning.com/)
+  - [Brain inspired](https://braininspired.co/)
+  - [Stephen Wolfram podcast](https://soundcloud.com/stephenwolfram)
+  - [Chai Tea Data Science](https://chaitimedatascience.com/)
+  - [DeepMind Podcast](https://deepmind.com/blog/article/welcome-to-the-deepmind-podcast)
+  - [Towards data science](https://towardsdatascience.com/podcast/home)
+  - [Partially derivative](http://partiallyderivative.com/)
+  - [The data exchange](https://thedataexchange.media/episodes/)
+
