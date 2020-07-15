@@ -22,6 +22,7 @@ Definitely incomplete, always growing list of cool, free learning/fun resources 
   - [fast.ai](https://www.fast.ai/): a myriad of learning resources (ML, python, dev. skills, etc.).
   - [Numba - Tell Those C++ Bullies to Get Lost - Forsyth & Barba - SciPy 2017](https://www.youtube.com/watch?v=SzBi3xdEF2Y&list=PLYx7XA2nY5Gf37zYZMw6OqGFRPjB1jCy6&index=7)
   - [Setosa: visual explanations](https://setosa.io/)
+  - [A Bluffer's Guide to Dimension Reduction - Leland McInnes - PyData 2018](https://www.youtube.com/watch?v=9iol3Lk6kyU)
   - [fastpages](https://fastpages.fast.ai/): great tool to easily build blogs like this.
 
 ## Youtube channels
