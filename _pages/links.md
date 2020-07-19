@@ -17,10 +17,13 @@ Definitely incomplete, always growing list of cool, free learning/fun resources 
   - [Real Python](https://realpython.com/): awesome tutorials about all sorts of aspects of the language.
   - [Scipy Lectures](http://scipy-lectures.org): learn numerics, science, and data with Python.
   - [Reproducible workflow in Jupyter- Jake van der Plas](https://www.youtube.com/playlist?list=PLYCpMb24GpOC704uO9svUrihl-HY1tTJJ)
+  - [Statistics for Hackers- Jake van der Plas - PyCon 2016](https://www.youtube.com/watch?v=Iq9DzN6mvYA)
+  - [Computational Statistics - Allen Downey - SciPy 2017](https://www.youtube.com/watch?v=He9MCbs1wgE)
   - [Untitled12 - Vincent Warmerdam - PyData 2019](https://www.youtube.com/watch?list=PLGVZCDnMOq0pDxc2cSp_N42M4OPfLgtBD&v=yXGCKqo5cEYt)
   - [Gaussian Progress – Vincent Wamerdam - PyData 2019](https://www.youtube.com/watch?v=aICqoAG5BXQ)
   - [fast.ai](https://www.fast.ai/): a myriad of learning resources (ML, python, dev. skills, etc.).
   - [Numba - Tell Those C++ Bullies to Get Lost - Forsyth & Barba - SciPy 2017](https://www.youtube.com/watch?v=SzBi3xdEF2Y&list=PLYx7XA2nY5Gf37zYZMw6OqGFRPjB1jCy6&index=7)
+  - [Anatomy of Matplotlib - Root & Aizenman - SciPy 2018](https://www.youtube.com/watch?v=6gdNUDs6QPc)
   - [Setosa: visual explanations](https://setosa.io/)
   - [A Bluffer's Guide to Dimension Reduction - Leland McInnes - PyData 2018](https://www.youtube.com/watch?v=9iol3Lk6kyU)
   - [fastpages](https://fastpages.fast.ai/): great tool to easily build blogs like this.
@@ -32,7 +35,7 @@ Definitely incomplete, always growing list of cool, free learning/fun resources 
   - [Luis serrano](https://www.youtube.com/channel/UCgBncpylJ1kiVaPyP-PZauQ): machine learning algorithms and intuitions, in simple words.
   - [Luke Smith](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA): unix, vim, latex, markdown, free-software, etc.
   - [Python Engineer](https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA)
-  - [Ben Lambert – Stats, ML, Bayesian stuff](https://www.youtube.com/user/SpartacanUsuals)
+  - [Ben Lambert](https://www.youtube.com/user/SpartacanUsuals): stats, ML, Bayesian stuff.
   - [Statsquest – Josh Starmer](https://www.youtube.com/user/joshstarmer): stats, machine learning, algorithms, bam!
   - [Arxiv Insights](https://www.youtube.com/channel/UCNIkB2IeJ-6AmZv7bQ1oBYg): machine learning papers explained and discussed.
   
