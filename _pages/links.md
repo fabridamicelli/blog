@@ -31,6 +31,7 @@ Definitely incomplete, always growing list of cool, free learning/fun resources 
 ## Youtube channels
   - [3brown1blue](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw): one of the best teachers in the internet. Ever.
   - [Corey Schafer](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g): hands down one of the best Python resources out there.
+  - [anthonywritescode](https://www.youtube.com/channel/UC46xhU1EH7aywEgvA9syS3w): mostly (not only) Python features, tools & idioms explained.
   - [Real Python](https://www.youtube.com/channel/UCI0vQvr9aFn27yR6Ej6n5UA)
   - [Luis serrano](https://www.youtube.com/channel/UCgBncpylJ1kiVaPyP-PZauQ): machine learning algorithms and intuitions, in simple words.
   - [Luke Smith](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA): unix, vim, latex, markdown, free-software, etc.
