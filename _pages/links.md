@@ -19,9 +19,10 @@ Definitely incomplete, always growing list of cool, free learning/fun resources 
   - [Untitled12 - Vincent Warmerdam - PyData 2019](https://www.youtube.com/watch?list=PLGVZCDnMOq0pDxc2cSp_N42M4OPfLgtBD&v=yXGCKqo5cEYt)
   - [Gaussian Progress – Vincent Wamerdam - PyData 2019](https://www.youtube.com/watch?v=aICqoAG5BXQ)        
   - [A Bluffer's Guide to Dimension Reduction - Leland McInnes - PyData 2018](https://www.youtube.com/watch?v=9iol3Lk6kyU)
-  - [fast.ai](https://www.fast.ai/): a myriad of learning resources (ML, python, dev. skills, etc.).
+  - [fast.ai](https://www.fast.ai/): a myriad of learning resources (ML, python, dev. skills, etc.)
   - [fastpages](https://fastpages.fast.ai/): great tool to easily build blogs like this.
   - [Setosa: visual explanations](https://setosa.io/)
+  - [Docker](https://www.youtube.com/watch?v=fqMOX6JJhGo): nail down the basics with this tutorial from freeCodeCamp.
 
 ## Youtube channels
   - [3brown1blue](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw): one of the best teachers in the internet. Ever.
