@@ -23,6 +23,7 @@ Definitely incomplete, always growing list of cool, free learning/fun resources 
   - [fastpages](https://fastpages.fast.ai/): great tool to easily build blogs like this.
   - [Setosa: visual explanations](https://setosa.io/)
   - [Docker](https://www.youtube.com/watch?v=fqMOX6JJhGo): nail down the basics with this tutorial from freeCodeCamp.
+  - [Git](https://missing.csail.mit.edu/2020/version-control/): go beyond typing commmands blindly - understand git's data model.
 
 ## Youtube channels
   - [3brown1blue](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw): one of the best teachers in the internet. Ever.
